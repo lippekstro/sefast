@@ -1,0 +1,46 @@
+.container-login {
+    display: grid;
+    grid-template-areas: 'sidenav login';
+    margin: 1rem;
+
+}
+
+.sidenav {
+    grid-area: sidenav;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid black;
+}
+
+.login {
+    grid-area: login;
+    padding: 1rem;
+}
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.registro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #402978;
+    color: rgb(255, 255, 255);
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}

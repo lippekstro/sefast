@@ -1,0 +1,59 @@
+* {
+    font-family: sans-serif;
+}
+
+.roda {
+    background-color: white;
+    margin: 1rem 1rem 0.5rem 1rem;
+    padding: 0.5rem;
+    text-align: center;
+
+
+}
+
+body {
+    background-color: #E8F2F6;
+
+}
+
+.corpo {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    background-color: white;
+    padding: 1rem;
+    margin: 0.5rem 1rem 1rem 1rem;
+
+
+}
+
+.bot {
+    background-color: #967BD8;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: white;
+    min-width: 15rem;
+    font-size: 20px;
+
+
+}
+
+
+#botao1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width:762px) and (max-width:992px) {
+    .corpo {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width:761px) {
+    .corpo {
+        grid-template-columns: auto;
+    }
+}
