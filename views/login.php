@@ -12,15 +12,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
    </div>
 
    <div class="login">
-      <form>
+      <form action="/sefast/controllers/login_controller.php" method="post">
          <div class="form-group my-3">
-            <label>Seu nome completo</label>
-            <input type="text" class="form-control" placeholder="Nome">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email" placeholder="Email">
          </div>
 
          <div class="form-group my-3">
             <label>Senha</label>
-            <input type="password" class="form-control" placeholder="Senha">
+            <input type="password" class="form-control" name="senha" placeholder="Senha">
          </div>
 
          <div class="my-3">

@@ -5,7 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
 
 
 <section class="registro">
-   <form method="post" autocomplete="off">
+   <form action="/sefast/controllers/usuario_add_controller.php" method="post" autocomplete="off">
       <h1>Registro (SeFast)</h1>
       <div class="mensagem-de-registro">Crie sua conta <strong>grátis</strong></div>
 
@@ -27,30 +27,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
       <div class="my-3">
          <label for="tel">Telefone</label>
          <input type="text" class="form-control" id="tel" name="tel" placeholder="Telefone">
-      </div>
-
-      <div class="my-3">
-         <label for="logradouro">Logradouro</label>
-         <select name="logradouro" id="logradouro" class="form-control">
-            <option value="rua" selected>Rua</option>
-            <option value="quadra">Quadra</option>
-            <option value="avenida">Avenida</option>
-         </select>
-      </div>
-
-      <div class="my-3">
-         <label for="endereco">Endereço</label>
-         <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço">
-      </div>
-
-      <div class="my-3">
-         <label for="bairro">Bairro</label>
-         <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
-      </div>
-
-      <div class="my-3">
-         <label for="cidade">Cidade</label>
-         <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade">
       </div>
 
 

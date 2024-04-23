@@ -39,7 +39,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
             <div class="conteiner">
                 <img src="/sefast/imgs/prof.avif" alt="prof" class="imgprof">
                 <h1><b>SLA</b></h1>
-                <button class="butao_c">Ver Mais</button>
+                <a href="/sefast/views/detalhes_servico.php" class="btn btn-primary">Ver Mais</a>
             </div>
         </div>
         <div class="cartao2">

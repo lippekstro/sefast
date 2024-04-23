@@ -1,6 +1,6 @@
 CREATE DATABASE sefast;
 
-use sefast;
+USE sefast;
 
 CREATE TABLE usuarios(
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
@@ -8,10 +8,6 @@ CREATE TABLE usuarios(
     email VARCHAR(50) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
     telefone VARCHAR(20) NOT NULL,
-    logradouro ENUM('rua', 'quadra', 'avenida') DEFAULT 'rua',
-    endereco VARCHAR(255) NOT NULL,
-    bairro VARCHAR(255) NOT NULL,
-    cidade VARCHAR(255) NOT NULL,
     site_usuario VARCHAR(255),
     foto_usuario LONGBLOB,
     nivel_acesso INT DEFAULT 1

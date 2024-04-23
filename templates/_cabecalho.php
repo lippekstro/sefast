@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -14,6 +18,7 @@
     <link rel="stylesheet" href="/sefast/css/login.css">
     <link rel="stylesheet" href="/sefast/css/servicos.css">
     <link rel="stylesheet" href="/sefast/css/servicos_gerenciar.css">
+    <link rel="stylesheet" href="/sefast/css/cadastro_servico.css">
 </head>
 
 <body>
@@ -29,6 +34,11 @@
             </li>
             <li class="user">
                 <a href="/sefast/views/login.php" title="login">
+                    <img src="/sefast/imgs/usuario.png" alt="usuario" width="35px" height="35px">
+                </a>
+            </li>
+            <li class="user">
+                <a href="/sefast/views/perfil.php" title="perfil">
                     <img src="/sefast/imgs/usuario.png" alt="usuario" width="35px" height="35px">
                 </a>
             </li>

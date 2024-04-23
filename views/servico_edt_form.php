@@ -10,22 +10,21 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
                 <label for="servico">Serviço:</label>
                 <input id="cadastro" type="text" name="servico" size="40">
             </div>
-
             <div class="categ">
-                <label for="descricao">Descrição:</label>
-                <textarea name="descricao" id="" cols="30" rows="10"></textarea>
+                <label for="endereco">Endereço:</label>
+                <input id="cadastro" type="text" name="endereco" size="40">
             </div>
-
             <div class="categ">
-                <label for="categoria">Categoria:</label>
-                <select name="categoria" id="categoria">
-                    <option value=""></option>
-                </select>
+                <label for="contato">Contatos:</label>
+                <input id="cadastro" type="text" name="contato" size="40">
             </div>
-
             <div class="categ">
-                <label for="foto">Imagem:</label>
-                <input type="file" name="foto" id="foto">
+                <label for="social">Redes Sociais:</label>
+                <input id="cadastro" type="text" name="social" size="40">
+            </div>
+            <div class="categ">
+                <label for="descri">Descrição:</label>
+                <textarea name="descri" id="" cols="30" rows="10"></textarea>
             </div>
 
             <button type="submit">Cadastrar</button>
