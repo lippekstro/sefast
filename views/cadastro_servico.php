@@ -1,10 +1,18 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
+require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/models/categoria.php';
+try {
+    $lista=Categoria::listar();
+
+} catch (\Throwable $th) {
+    //throw $th;
+}
+
 ?>
 
 <section id="coisas">
     <div class="infos">
-        <form class="formulario" action="" method="post" autocomplete="on">
+        <form class="formulario" action="/sefast/controllers/servico_add_controller.php" method="post" enctype="multipart/form-data">
 
             <div class="categ">
                 <label for="servico">Serviço:</label>
@@ -19,7 +27,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
             <div class="categ">
                 <label for="categoria">Categoria:</label>
                 <select name="categoria" id="categoria">
-                    <option value=""></option>
+                    <?php foreach($lista as $categoria) :?><option value="<?= $categoria['id_categoria']?>"><?= $categoria['nome_categoria'] ?></option> <?php endforeach ;?>
                 </select>
             </div>
 

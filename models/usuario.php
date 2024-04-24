@@ -67,6 +67,9 @@ class Usuario{
         $stmt->bindValue(':tel', $this->telefone);
         $stmt->bindValue(':siteusuario', $this->site);
         $stmt->bindValue(':foto', $this->foto);
+        $stmt->bindValue(':id', $this->id_usuario);
+
+
         $stmt->execute();
     }
 
@@ -91,6 +94,7 @@ class Usuario{
             $_SESSION['id_usuario'] = $resultado['id_usuario'];
             $_SESSION['nome_usuario'] = $resultado['nome_usuario'];
             $_SESSION['email'] = $resultado['email'];
+            $_SESSION['foto'] = $resultado['foto_usuario'];
 
             header('Location: /sefast/index.php');
         } else {

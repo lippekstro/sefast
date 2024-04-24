@@ -33,7 +33,7 @@ class Servico{
     }
 
     public function criar(){
-        $sql = "INSERT INTO servicos (nome_categoria, descricao, foto_categoria, id_categoria, id_usuario) VALUES (:nome, :descr, :foto, :cat, :usu)";
+        $sql = "INSERT INTO servicos (nome_servico, descricao, foto_servico, id_categoria, id_usuario) VALUES (:nome, :descr, :foto, :cat, :usu)";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
         $stmt->bindValue(':nome', $this->nome_servico);
@@ -45,13 +45,34 @@ class Servico{
     }
 
     public static function listar(){
-        $sql = "SELECT * FROM servicos";
+        $sql = "SELECT s.*, u.nome_usuario, u.email, u.telefone, u.site_usuario, c.nome_categoria
+        FROM servicos s 
+        JOIN usuarios u 
+        ON s.id_usuario = u.id_usuario
+        JOIN categorias c
+        ON s.id_categoria = c.id_categoria";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
         $stmt->execute();
         $resultado = $stmt->fetchAll();
         return $resultado;
     }
+    public static function listarPorId($id){
+        $sql = "SELECT s.*, u.nome_usuario, u.email, u.telefone, u.site_usuario, c.nome_categoria
+        FROM servicos s 
+        JOIN usuarios u 
+        ON s.id_usuario = u.id_usuario
+        JOIN categorias c
+        ON s.id_categoria = c.id_categoria
+        WHERE s.id_servico = :id";
+        $conexao = Conexao::criarConexao();
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+        $resultado = $stmt->fetch();
+        return $resultado;
+    }
+
 
     public function atualizar(){
         $sql = "UPDATE servicos SET nome_sevico = :nome, descricao = :descr, foto_servico = :foto, id_categoria = :cat WHERE id_servico = :id";

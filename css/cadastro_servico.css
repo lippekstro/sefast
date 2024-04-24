@@ -39,7 +39,8 @@ body {
 }
 
 .categ input,
-.categ textarea {
+.categ textarea,
+.categ select {
     border-radius: 10px;
     border: none;
     padding: 0.5rem;
