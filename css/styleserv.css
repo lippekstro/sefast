@@ -1,0 +1,33 @@
+.corpo{
+    background-color: #E8F2F6;
+    display: flex;
+    justify-content: center;
+}
+.nego{
+    font-weight: bold;
+}
+#maine{
+    margin-top: 200px;
+    display: grid;
+    grid-template-areas: "esquerdo direito";
+    width: 75%;
+}
+.esquerdo{
+    grid-area: esquerdo;
+}
+.direito{
+    grid-area: direito;
+    margin-left: 150px;
+}
+
+@media only screen and (max-width: 767px){
+    #maine{
+        grid-template-areas: 'esquerdo'
+        'direito'; 
+        margin-top: 0px;
+    }
+    .direito{
+        margin-left: 0px;
+    }
+
+}
