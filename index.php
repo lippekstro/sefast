@@ -1,5 +1,13 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
+require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/models/servico.php';
+
+try {
+    $lista = Servico::listar();
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
 ?>
 
 <section>
@@ -35,27 +43,16 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
 
 <section>
     <div class="cartoes">
+        <?php foreach($lista as $item): ?>
         <div class="cartao">
             <div class="conteiner">
-                <img src="/sefast/imgs/prof.avif" alt="prof" class="imgprof">
-                <h1><b>SLA</b></h1>
-                <a href="/sefast/views/detalhes_servico.php" class="btn btn-primary">Ver Mais</a>
+                <img src="data:image;base64,<?= base64_encode($item['foto_servico']) ?>" alt="prof" class="imgprof">
+                <h1><b><?= $item['nome_servico'] ?></b></h1>
+                <a href="/sefast/views/detalhes_servico.php?id=<?= $item['id_servico'] ?>" class="btn btn-primary">Ver Mais</a>
             </div>
         </div>
-        <div class="cartao2">
-            <div class="conteiner2">
-                <img src="/sefast/imgs/prof.avif" alt="prof" class="imgprof">
-                <h1><b>SLA</b></h1>
-                <button class="butao_c">Ver Mais</button>
-            </div>
-        </div>
-        <div class="cartao3">
-            <div class="conteiner3">
-                <img src="/sefast/imgs/prof.avif" alt="prof" class="imgprof">
-                <h1><b>SLA</b></h1>
-                <button class="butao_c">Ver Mais</button>
-            </div>
-        </div>
+        <?php endforeach; ?>
+        
     </div>
 </section>
 

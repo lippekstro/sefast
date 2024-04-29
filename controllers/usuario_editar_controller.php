@@ -6,7 +6,7 @@ try {
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $telefone = $_POST["telefone"];
-    $site= $_POST["site"];
+    $site = $_POST["site"];
     if (!empty($_POST["senha"])) {
         $senha = $_POST["senha"];
         $senha = password_hash($senha, PASSWORD_DEFAULT);
@@ -36,6 +36,15 @@ try {
     }
 
     $copia->atualizar();
+
+    session_start();
+    $_SESSION['nome_usuario'] = $copia->nome_usuario;
+    $_SESSION['email'] = $copia->email;
+    $_SESSION['foto'] = $copia->foto;
+    $_SESSION['telefone'] = $copia->telefone;
+    
+
+
     header('Location: /sefast/views/perfil.php');
 } catch (\Throwable $th) {
     //throw $th;

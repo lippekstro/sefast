@@ -1,5 +1,10 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
+require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php';
+
+if(isset($_SESSION['id_usuario'])){
+   header('Location: /sefast/views/perfil.php');
+}
+
 ?>
 
 <section class="container-login">

@@ -73,6 +73,22 @@ class Servico{
         return $resultado;
     }
 
+    public static function listarPorIdUsuario($id){
+        $sql = "SELECT s.*, u.nome_usuario, u.email, u.telefone, u.site_usuario, c.nome_categoria
+        FROM servicos s 
+        JOIN usuarios u 
+        ON s.id_usuario = u.id_usuario
+        JOIN categorias c
+        ON s.id_categoria = c.id_categoria
+        WHERE s.id_usuario = :id";
+        $conexao = Conexao::criarConexao();
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+        $resultado = $stmt->fetch();
+        return $resultado;
+    }
+
 
     public function atualizar(){
         $sql = "UPDATE servicos SET nome_sevico = :nome, descricao = :descr, foto_servico = :foto, id_categoria = :cat WHERE id_servico = :id";

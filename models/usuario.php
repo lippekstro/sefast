@@ -95,6 +95,8 @@ class Usuario{
             $_SESSION['nome_usuario'] = $resultado['nome_usuario'];
             $_SESSION['email'] = $resultado['email'];
             $_SESSION['foto'] = $resultado['foto_usuario'];
+            $_SESSION['telefone'] = $resultado['telefone'];
+            $_SESSION['nivel_acesso'] = $resultado['nivel_acesso'];
 
             header('Location: /sefast/index.php');
         } else {

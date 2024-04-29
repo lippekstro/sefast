@@ -30,19 +30,19 @@ session_start();
                     <img src="/sefast/imgs/sefst2.png" alt="sefast" width="50px" height="50px">
                 </a>
             </li>
-            <li>
-                <input type="text" placeholder="Pesquisar.." class="pesq">
-            </li>
-            <li class="user">
-                <a href="/sefast/views/login.php" title="login">
-                    <img src="/sefast/imgs/usuario.png" alt="usuario" width="35px" height="35px">
-                </a>
-            </li>
-            <li class="user">
-                <a href="/sefast/views/perfil.php" title="perfil">
-                    <img src="/sefast/imgs/person.png" alt="usuario" width="35px" height="35px">
-                </a>
-            </li>
+            <?php if (!isset($_SESSION['id_usuario'])) : ?>
+                <li class="user">
+                    <a href="/sefast/views/login.php" title="login">
+                        <img src="/sefast/imgs/usuario.png" alt="usuario" width="35px" height="35px">
+                    </a>
+                </li>
+            <?php else : ?>
+                <li class="user">
+                    <a href="/sefast/views/perfil.php" title="perfil">
+                        <img src="/sefast/imgs/person.png" alt="usuario" width="35px" height="35px">
+                    </a>
+                </li>
+            <?php endif; ?>
             <li class="bar">
                 <a href="/sefast/views/servicos.php" title="serviços">
                     <img src="/sefast/imgs/barras.png" alt="barras" width="35px" height="35px">

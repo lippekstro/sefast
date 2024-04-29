@@ -223,8 +223,9 @@ body {
 }
 
 .cartoes {
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: space-evenly;
-    display: flex;
     margin-top: 35px;
 }
 
@@ -267,20 +268,7 @@ button {
 
     .cartoes {
         display: grid;
-        grid-template-areas: 'card1'
-            'card2'
-            'card3';
-    }
-
-    .cartao {
-        grid-area: card1;
-    }
-
-    .cartao2 {
-        grid-area: card2;
-    }
-
-    .cartao3 {
-        grid-area: card3;
+        grid-template-columns: auto;
+        gap: 1rem;
     }
 }

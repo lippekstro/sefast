@@ -30,3 +30,8 @@ CREATE TABLE servicos(
     FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario)
 );
 
+-- SEEDS
+INSERT INTO categorias (nome_categoria) VALUES
+('Serviços Gerais'),
+('Artesanato'),
+('Frete')
