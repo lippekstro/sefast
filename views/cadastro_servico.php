@@ -36,7 +36,7 @@ try {
                 <input type="file" name="foto" id="foto">
             </div>
 
-            <button type="submit">Cadastrar</button>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>
 </section>

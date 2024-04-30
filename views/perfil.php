@@ -17,71 +17,6 @@ if($_SESSION['nivel_acesso'] == 1){
 
 ?>
 
-<style>
-    .titulo {
-        margin-left: 40%;
-        margin-top: 500px;
-    }
-
-    .botoes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .info-tab {
-        grid-area: info-tab;
-        border-left: 2px solid rgb(99, 23, 99);
-        margin-left: 5px;
-        padding: 1rem;
-    }
-
-    .btnetab {
-        display: grid;
-        grid-template-areas: "botoes info-tab";
-    }
-
-    .btn {
-        border: 2px solid black;
-        background-color: #402978;
-        float: inline-start;
-        margin: 1rem;
-        padding: 10px;
-        color: white;
-        text-decoration: none;
-        font-size: 14px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .btn:hover {
-        background-color: #5637a3;
-        transition: ease 0.1s;
-
-    }
-
-    .titulo {
-        padding: 20px;
-    }
-
-    .margin {
-        margin: 100px;
-    }
-
-    .user {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    #foto-do-perfil {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-    }
-</style>
-
 <div class="margin">
 
     <div class="user">
@@ -97,24 +32,24 @@ if($_SESSION['nivel_acesso'] == 1){
     <hr color="purple">
     <div class="btnetab">
         <div class="botoes">
-            <a class="btn" href="/sefast/views/editar_perfil.php">Editar perfil</a>
+            <a class="btn btn-primary m-3" href="/sefast/views/editar_perfil.php">Editar perfil</a>
 
             <?php if ($_SESSION['nivel_acesso'] == 1) : ?>
                 <?php if(!isset($servico['id_servico'])): ?>
-                <a href="/sefast/views/cadastro_servico.php" class="btn">Adicionar Serviço</a>
+                <a href="/sefast/views/cadastro_servico.php" class="btn btn-primary m-3">Adicionar Serviço</a>
                 <?php else: ?>
-                <a href="/sefast/views/servico_edt_form.php" class="btn">Editar Serviço</a>
-                <a href="/sefast/controllers/servico_del_controller.php?id=<?= $servico['id_servico'] ?>" class="btn">Excluir Serviço</a>
+                <a href="/sefast/views/servico_edt_form.php" class="btn btn-primary m-3">Editar Serviço</a>
+                <a href="/sefast/controllers/servico_del_controller.php?id=<?= $servico['id_servico'] ?>" class="btn btn-primary m-3">Excluir Serviço</a>
                 <?php endif; ?>
             <?php endif; ?>
 
             <?php if ($_SESSION['nivel_acesso'] == 2) : ?>
-                <a class="btn" href="/sefast/views/admin/servicos_gerenciar.php">Gerenciar Serviços</a>
-                <a href="/sefast/views/admin/categorias_gerenciar.php" class="btn">Gerenciar Categorias</a>
+                <a class="btn btn-primary m-3" href="/sefast/views/admin/servicos_gerenciar.php">Gerenciar Serviços</a>
+                <a href="/sefast/views/admin/categorias_gerenciar.php" class="btn btn-primary m-3">Gerenciar Categorias</a>
             <?php endif; ?>
 
 
-            <a class="btn" href="/sefast/controllers/logout_controller.php">Terminar seção</a>
+            <a class="btn btn-primary m-3" href="/sefast/controllers/logout_controller.php">Terminar seção</a>
         </div>
         <div class="info-tab">
             <h2>Informaçoes Pessoais:</h2>

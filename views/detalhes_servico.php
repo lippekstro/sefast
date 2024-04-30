@@ -13,7 +13,7 @@ try {
 
 
 
-<section class="corpo">
+<section class="d-flex justify-content-center align-items-center m-3">
     <main id="maine">
         <div class="esquerdo">
             <img src="data:image;base64,<?= base64_encode($trabaio['foto_servico']) ?>" alt="" width="100%">
@@ -21,9 +21,9 @@ try {
         <div class="direito">
             <h1>Tipo de Serviço: <?= $trabaio['nome_servico'] ?></h1>
             <p class="nego">SeFaster: <?= $trabaio['nome_usuario'] ?></p>
-            <p class="nego">Email: <?= $trabaio['email'] ?></p>
-            <p class="nego">Contatos: <?= $trabaio['telefone'] ?></p>
-            <p class="nego">Redes Sociais: <?= $trabaio['site_usuario'] ?></p>
+            <p class="nego">Email: <a href="mailto:<?= $trabaio['email'] ?>"><?= $trabaio['email'] ?></a></p>
+            <p class="nego">Contatos: <a href="tel:<?= $trabaio['telefone'] ?>"><?= $trabaio['telefone'] ?></a></p>
+            <p class="nego">Redes Sociais: <a href="https://<?= $trabaio['site_usuario'] ?>" target="_blank"><?= $trabaio['site_usuario'] ?></a></p>
 
             <p><?= $trabaio['descricao'] ?></p>
         </div>

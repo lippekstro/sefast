@@ -91,7 +91,7 @@ class Servico{
 
 
     public function atualizar(){
-        $sql = "UPDATE servicos SET nome_sevico = :nome, descricao = :descr, foto_servico = :foto, id_categoria = :cat WHERE id_servico = :id";
+        $sql = "UPDATE servicos SET nome_servico = :nome, descricao = :descr, foto_servico = :foto, id_categoria = :cat WHERE id_servico = :id";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
         $stmt->bindValue(':nome', $this->nome_servico);

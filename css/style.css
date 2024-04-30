@@ -229,19 +229,20 @@ body {
     margin-top: 35px;
 }
 
-
-.perfil {
-    margin: 30px;
-    padding: 30px;
-    border: 3px solid rebeccapurple;
-}
-
 .foto {
     border-radius: 100px
 }
 
-button {
-    margin: 30px;
+.redes-sociais {
+    width: 15%;
+}
+
+form {
+    background-color: #402978;
+    padding: 1rem;
+    margin: 1rem;
+    color: white;
+    border-radius: 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -270,5 +271,86 @@ button {
         display: grid;
         grid-template-columns: auto;
         gap: 1rem;
+    }
+
+    .imagem-login {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+    }
+
+    .redes-sociais {
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .container-login {
+        grid-template-columns: 1fr;
+    }
+
+    .btnetab {
+        grid-template-areas: 'info-tab'
+            'botoes';
+    }
+
+    #maine {
+        grid-template-areas: 'esquerdo'
+            'direito';
+        margin: 1rem;
+
+    }
+
+    .direito {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+    .redes-sociais {
+        width: 30%;
+        margin-bottom: 1rem;
+    }
+
+    .sidenav {
+        display: none;
+    }
+
+    #maine {
+        grid-template-areas: 'esquerdo'
+            'direito';
+        margin: 1rem;
+
+    }
+
+    .direito {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    .redes-sociais {
+        width: 25%;
+        margin-bottom: 1rem;
+    }
+
+    #maine {
+        grid-template-areas: 'esquerdo'
+            'direito';
+        margin: 1rem;
+
+    }
+
+    .direito {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+    .redes-sociais {
+        width: 20%;
+        margin-bottom: 1rem;
     }
 }

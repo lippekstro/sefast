@@ -14,12 +14,14 @@ session_start();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <script src="/sefast/js/bootstrap.js" defer></script>
-    <link rel="stylesheet" href="/sefast/css/style.css">
+    
     <link rel="stylesheet" href="/sefast/css/login.css">
     <link rel="stylesheet" href="/sefast/css/servicos.css">
     <link rel="stylesheet" href="/sefast/css/servicos_gerenciar.css">
     <link rel="stylesheet" href="/sefast/css/cadastro_servico.css">
     <link rel="stylesheet" href="/sefast/css/styleserv.css">
+    <link rel="stylesheet" href="/sefast/css/perfil.css">
+    <link rel="stylesheet" href="/sefast/css/style.css">
 </head>
 
 <body>

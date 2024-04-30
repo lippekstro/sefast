@@ -1,0 +1,43 @@
+.titulo {
+    margin-left: 40%;
+    margin-top: 500px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info-tab {
+    grid-area: info-tab;
+    border-left: 2px solid rgb(99, 23, 99);
+    margin-left: 5px;
+    padding: 1rem;
+}
+
+.btnetab {
+    display: grid;
+    grid-template-areas: "botoes info-tab";
+}
+
+.titulo {
+    padding: 20px;
+}
+
+.margin {
+    margin: 1rem;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#foto-do-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}

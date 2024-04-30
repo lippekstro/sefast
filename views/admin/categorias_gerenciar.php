@@ -10,7 +10,7 @@ try {
 
 ?>
 
-<section>
+<section class="overflow-x-auto">
     <table>
         <tr>
             <th>Categoria</th>

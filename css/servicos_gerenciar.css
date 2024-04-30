@@ -16,7 +16,7 @@ body {
 
 }
 
-.corpo {
+.container-servicos {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 1rem;
@@ -49,13 +49,13 @@ body {
 }
 
 @media only screen and (min-width:762px) and (max-width:992px) {
-    .corpo {
+    .container-servicos {
         grid-template-columns: auto auto;
     }
 }
 
 @media only screen and (max-width:761px) {
-    .corpo {
+    .container-servicos {
         grid-template-columns: auto;
     }
 }

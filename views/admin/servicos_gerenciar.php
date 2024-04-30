@@ -19,7 +19,7 @@ try {
         <h1>serviços cadastrados</h1>
     </div>
 
-    <div class="corpo">
+    <div class="container-servicos">
         <?php foreach ($lista as $item) : ?>
             <div id="botao1">
                 <a href="/sefast/views/detalhes_servico.php?id=<?= $item['id_servico'] ?>" class="bot"><?= $item['nome_servico'] ?></a>
