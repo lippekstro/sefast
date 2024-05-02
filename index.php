@@ -14,18 +14,11 @@ try {
     <div class="slideshow-container">
 
         <div class="mySlides">
-            <img src="https://source.unsplash.com/random/1920x1080/?potato" style="width:100%">
-            <div class="text">Construtor</div>
+            <img src="/sefast/imgs/1.jpg" style="width:100%">
         </div>
 
         <div class="mySlides">
-            <img src="https://source.unsplash.com/random/1920x1080/?artist" style="width:100%">
-            <div class="text">Artista</div>
-        </div>
-
-        <div class="mySlides">
-            <img src="https://source.unsplash.com/random/1920x1080/?sniper" style="width:100%">
-            <div class="text">Mercenario</div>
+            <img src="/sefast/imgs/2.jpg" style="width:100%">
         </div>
 
         <a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
@@ -37,7 +30,6 @@ try {
     <div style="text-align:center">
         <span class="ponto" onclick="currentSlide(1)"></span>
         <span class="ponto" onclick="currentSlide(2)"></span>
-        <span class="ponto" onclick="currentSlide(3)"></span>
     </div>
 </section>
 
