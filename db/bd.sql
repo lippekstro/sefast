@@ -34,4 +34,13 @@ CREATE TABLE servicos(
 INSERT INTO categorias (nome_categoria) VALUES
 ('Serviços Gerais'),
 ('Artesanato'),
-('Frete')
+('Frete'),
+('Tecnologia da Informação'),
+('Design Gráfico'),
+('Educação'),
+('Consultoria'),
+('Saúde e Bem-estar'),
+('Gastronomia'),
+('Limpeza'),
+('Construção Civil'),
+('Marketing e Publicidade');

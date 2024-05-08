@@ -3,6 +3,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/models/servico.php';
 
 if (!isset($_SESSION['id_usuario'])) {
+    $_SESSION['aviso'] = "Você deve estar logado";
     header('Location: /sefast/views/login.php');
 }
 

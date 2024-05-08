@@ -4,13 +4,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
 
 
 
-<section class="registro d-flex justify-content-center align-items-center">
-   <form action="/sefast/controllers/usuario_add_controller.php" method="post" autocomplete="off">
-      <h1>Registro (SeFast)</h1>
-      <div class="mensagem-de-registro">Crie sua conta <strong>grátis</strong></div>
+<section class="registro d-flex justify-content-center align-items-center" id="container-form-registro">
+   <form action="/sefast/controllers/usuario_add_controller.php" method="post" autocomplete="off" id="form-registro">
 
-      <a class="btn btn-black" style="color: white;" href="/sefast/views/login.php">Já possui uma conta? Fazer login</a>
-      
       <div class="my-3">
          <label for="nome">Nome</label>
          <input autocomplete="disabled" type="text" id="nome" name="nome" class="form-control" placeholder="Nome" maxlength="40">
@@ -33,6 +29,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
 
       <button type="submit" class="btn btn-primary"> Criar conta </button>
 
+      <div class="my-3">
+         <a class="btn btn-black" style="color: white;" href="/sefast/views/login.php">Já possui uma conta? Fazer login</a>
+      </div>
    </form>
 </section>
 

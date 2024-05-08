@@ -7,13 +7,22 @@ if (isset($_SESSION['id_usuario'])) {
 
 ?>
 
-<section class="container-login m-3">
+<?php if (isset($_SESSION['aviso'])) : ?>
+   <section>
+      <div class="alert alert-danger text-center" role="alert">
+         <?= $_SESSION['aviso'] ?>
+         <?php unset($_SESSION['aviso']) ?>
+      </div>
+   </section>
+<?php endif; ?>
+
+<section class="container-login sect-login">
    <div class="imagem-login">
 
    </div>
 
-   <div class="login d-flex justify-content-center align-items-center">
-      <form action="/sefast/controllers/login_controller.php" method="post">
+   <div class="login d-flex justify-content-center align-items-stretch">
+      <form action="/sefast/controllers/login_controller.php" method="post" id='form-login'>
          <div class="form-group my-3">
             <label>Email</label>
             <input type="text" class="form-control" name="email" placeholder="Email">

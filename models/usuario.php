@@ -2,7 +2,8 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/db/conexao.php';
 
-class Usuario{
+class Usuario
+{
     public $id_usuario;
     public $nome_usuario;
     public $email;
@@ -11,17 +12,18 @@ class Usuario{
     public $site;
     public $foto;
     public $nivel_acesso;
-    
 
-    public function __construct($id=false)
+
+    public function __construct($id = false)
     {
-        if($id){
+        if ($id) {
             $this->id_usuario = $id;
             $this->carregar();
         }
     }
 
-    public function carregar(){
+    public function carregar()
+    {
         $sql = "SELECT * FROM usuarios WHERE id_usuario = :id";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
@@ -37,7 +39,8 @@ class Usuario{
         $this->nivel_acesso = $resultado['nivel_acesso'];
     }
 
-    public function criar(){
+    public function criar()
+    {
         $sql = "INSERT INTO usuarios (nome_usuario, email, senha, telefone) VALUES (:nome, :email, :senha, :tel)";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
@@ -48,7 +51,8 @@ class Usuario{
         $stmt->execute();
     }
 
-    public static function listar(){
+    public static function listar()
+    {
         $sql = "SELECT * FROM usuarios";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
@@ -57,7 +61,8 @@ class Usuario{
         return $resultado;
     }
 
-    public function atualizar(){
+    public function atualizar()
+    {
         $sql = "UPDATE usuarios SET nome_usuario = :nome, email = :email, senha = :senha, telefone = :tel, site_usuario = :siteusuario, foto_usuario = :foto  WHERE id_usuario = :id";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
@@ -73,7 +78,8 @@ class Usuario{
         $stmt->execute();
     }
 
-    public function deletar(){
+    public function deletar()
+    {
         $sql = "DELETE FROM usuarios WHERE id_usuario = :id";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
@@ -81,16 +87,18 @@ class Usuario{
         $stmt->execute();
     }
 
-    public static function logar($email, $senha){
+    public static function logar($email, $senha)
+    {
         $sql = "SELECT * FROM usuarios WHERE email = :email";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
         $stmt->bindValue(':email', $email);
         $stmt->execute();
         $resultado = $stmt->fetch();
+        
+        session_start();
 
-        if($resultado['id_usuario'] && password_verify($senha, $resultado['senha'])){
-            session_start();
+        if ($resultado['id_usuario'] && password_verify($senha, $resultado['senha'])) {
             $_SESSION['id_usuario'] = $resultado['id_usuario'];
             $_SESSION['nome_usuario'] = $resultado['nome_usuario'];
             $_SESSION['email'] = $resultado['email'];
@@ -100,6 +108,7 @@ class Usuario{
 
             header('Location: /sefast/index.php');
         } else {
+            $_SESSION['aviso'] = "EMAIL OU SENHA INCORRETOS";
             header('Location: /sefast/views/login.php');
         }
     }

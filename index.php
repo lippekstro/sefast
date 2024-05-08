@@ -14,11 +14,11 @@ try {
     <div class="slideshow-container">
 
         <div class="mySlides">
-            <img src="/sefast/imgs/1.jpg" style="width:100%">
+            <img src="/sefast/imgs/1.jpg">
         </div>
 
         <div class="mySlides">
-            <img src="/sefast/imgs/2.jpg" style="width:100%">
+            <img src="/sefast/imgs/2.jpg">
         </div>
 
         <a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
@@ -35,16 +35,19 @@ try {
 
 <section>
     <div class="cartoes">
-        <?php foreach($lista as $item): ?>
-        <div class="cartao">
-            <div class="conteiner">
-                <img src="data:image;base64,<?= base64_encode($item['foto_servico']) ?>" alt="prof" class="imgprof">
-                <h1><b><?= $item['nome_servico'] ?></b></h1>
-                <a href="/sefast/views/detalhes_servico.php?id=<?= $item['id_servico'] ?>" class="btn btn-primary">Ver Mais</a>
+        <?php foreach ($lista as $item) : ?>
+            <div class="cartao">
+                <div class="conteiner">
+                    <img src="data:image;base64,<?= base64_encode($item['foto_servico']) ?>" alt="prof" class="imgprof">
+                    
+                    <div class="card-conteudo">
+                        <h1><b><?= $item['nome_servico'] ?></b></h1>
+                        <a href="/sefast/views/detalhes_servico.php?id=<?= $item['id_servico'] ?>" class="btn btn-primary">Ver Mais</a>
+                    </div>
+                </div>
             </div>
-        </div>
         <?php endforeach; ?>
-        
+
     </div>
 </section>
 
