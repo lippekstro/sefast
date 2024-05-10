@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
 /* nav */
 ul {
     display: flex;
@@ -71,10 +78,6 @@ body {
 }
 
 /* carrosel */
-
-* {
-    box-sizing: border-box
-}
 
 .slideshow-container {
     position: relative;
@@ -278,7 +281,7 @@ form {
 }
 
 #container-form-registro {
-    background-image: url('/sefast/imgs/login.png');
+    background-image: url('/sefast/imgs/bg_sem.png');
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 0.1rem;
