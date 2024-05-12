@@ -81,7 +81,6 @@ body {
 
 .slideshow-container {
     position: relative;
-    height: 500px;
     margin-top: 0.1rem;
 }
 
@@ -165,54 +164,16 @@ body {
     text-align: center;
     width: 250px;
     height: 300px;
-    background-color: white;
-    /* margin-top: 16px; */
+    background-color: #402978;
+    color: white;
 }
 
 .cartao:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.conteiner {
-    padding: 2px 16px;
-}
-
-.cartao2 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 250px;
-    height: 300px;
-    background-color: white;
-}
-
-.cartao2:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.conteiner2 {
-    padding: 2px 16px;
-}
-
-.cartao3 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 250px;
-    height: 300px;
-    background-color: white;
-}
-
-.cartao3:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.conteiner3 {
-    padding: 2px 16px;
+.card-conteudo {
+    padding: 1rem;
 }
 
 .imgprof {
@@ -262,8 +223,6 @@ form {
 
 .mySlides img {
     width: 100%;
-    height: 500px;
-    object-fit: fill;
 }
 
 #form-login {

@@ -17,7 +17,7 @@ class Sessao
 
             // Se o tempo de inatividade exceder o limite, deslogue o usuário
             if ($tempo_inativo > $tempo_limite) {
-                header('Location: /defi/controllers/logout.php');
+                header('Location: /sefast/controllers/logout_controller.php');
             }
         }
 

@@ -43,4 +43,5 @@ INSERT INTO categorias (nome_categoria) VALUES
 ('Gastronomia'),
 ('Limpeza'),
 ('Construção Civil'),
-('Marketing e Publicidade');
+('Marketing e Publicidade'),
+('Outros');

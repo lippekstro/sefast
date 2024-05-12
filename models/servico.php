@@ -2,7 +2,8 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/db/conexao.php';
 
-class Servico{
+class Servico
+{
     public $id_servico;
     public $nome_servico;
     public $descricao;
@@ -10,15 +11,16 @@ class Servico{
     public $categoria;
     public $usuario;
 
-    public function __construct($id=false)
+    public function __construct($id = false)
     {
-        if($id){
+        if ($id) {
             $this->id_servico = $id;
             $this->carregar();
         }
     }
 
-    public function carregar(){
+    public function carregar()
+    {
         $sql = "SELECT * FROM servicos WHERE id_servico = :id";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
@@ -32,7 +34,8 @@ class Servico{
         $this->usuario = $resultado['id_usuario'];
     }
 
-    public function criar(){
+    public function criar()
+    {
         $sql = "INSERT INTO servicos (nome_servico, descricao, foto_servico, id_categoria, id_usuario) VALUES (:nome, :descr, :foto, :cat, :usu)";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
@@ -44,20 +47,24 @@ class Servico{
         $stmt->execute();
     }
 
-    public static function listar(){
+    public static function listar()
+    {
         $sql = "SELECT s.*, u.nome_usuario, u.email, u.telefone, u.site_usuario, c.nome_categoria
         FROM servicos s 
         JOIN usuarios u 
         ON s.id_usuario = u.id_usuario
         JOIN categorias c
-        ON s.id_categoria = c.id_categoria";
+        ON s.id_categoria = c.id_categoria
+        ORDER BY RAND()";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
         $stmt->execute();
         $resultado = $stmt->fetchAll();
         return $resultado;
     }
-    public static function listarPorId($id){
+    
+    public static function listarPorId($id)
+    {
         $sql = "SELECT s.*, u.nome_usuario, u.email, u.telefone, u.site_usuario, c.nome_categoria
         FROM servicos s 
         JOIN usuarios u 
@@ -73,7 +80,8 @@ class Servico{
         return $resultado;
     }
 
-    public static function listarPorIdUsuario($id){
+    public static function listarPorIdUsuario($id)
+    {
         $sql = "SELECT s.*, u.nome_usuario, u.email, u.telefone, u.site_usuario, c.nome_categoria
         FROM servicos s 
         JOIN usuarios u 
@@ -89,8 +97,27 @@ class Servico{
         return $resultado;
     }
 
+    public static function listarPorTermo($termo)
+    {
+        $sql = "SELECT s.*, u.nome_usuario, u.email, u.telefone, u.site_usuario, c.nome_categoria
+        FROM servicos s 
+        JOIN usuarios u 
+        ON s.id_usuario = u.id_usuario
+        JOIN categorias c
+        ON s.id_categoria = c.id_categoria
+        WHERE s.nome_servico LIKE :termo
+        ORDER BY s.nome_servico";
+        $conexao = Conexao::criarConexao();
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindValue(':termo', '%' . $termo . '%');
+        $stmt->execute();
+        $resultado = $stmt->fetchAll();
+        return $resultado;
+    }
 
-    public function atualizar(){
+
+    public function atualizar()
+    {
         $sql = "UPDATE servicos SET nome_servico = :nome, descricao = :descr, foto_servico = :foto, id_categoria = :cat WHERE id_servico = :id";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
@@ -102,7 +129,8 @@ class Servico{
         $stmt->execute();
     }
 
-    public function deletar(){
+    public function deletar()
+    {
         $sql = "DELETE FROM servicos WHERE id_servico = :id";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);

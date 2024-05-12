@@ -9,7 +9,7 @@ if (isset($_SESSION['id_usuario'])) {
 
 <?php if (isset($_SESSION['aviso'])) : ?>
    <section>
-      <div class="alert alert-danger text-center" role="alert">
+      <div class="alert alert-danger text-center m-3" role="alert">
          <?= $_SESSION['aviso'] ?>
          <?php unset($_SESSION['aviso']) ?>
       </div>

@@ -4,8 +4,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/models/categoria.php';
 try {
     $lista=Categoria::listar();
 
-} catch (\Throwable $th) {
-    //throw $th;
+} catch (PDOException $e) {
+    echo $e->getMessage();
 }
 
 ?>
