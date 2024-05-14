@@ -16,7 +16,7 @@ try {
 
             <div class="categ">
                 <label for="servico">Serviço:</label>
-                <input id="cadastro" type="text" name="servico" size="40">
+                <input id="cadastro" type="text" name="servico" size="40" required>
             </div>
 
             <div class="categ">

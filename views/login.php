@@ -25,12 +25,12 @@ if (isset($_SESSION['id_usuario'])) {
       <form action="/sefast/controllers/login_controller.php" method="post" id='form-login'>
          <div class="form-group my-3">
             <label>Email</label>
-            <input type="text" class="form-control" name="email" placeholder="Email">
+            <input type="text" class="form-control" name="email" placeholder="Email" required>
          </div>
 
          <div class="form-group my-3">
             <label>Senha</label>
-            <input type="password" class="form-control" name="senha" placeholder="Senha">
+            <input type="password" class="form-control" name="senha" placeholder="Senha" required>
          </div>
 
          <div class="form-group my-3">

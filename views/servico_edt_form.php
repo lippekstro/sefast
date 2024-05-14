@@ -18,7 +18,7 @@ try {
 
             <div class="categ">
                 <label for="servico">Serviço:</label>
-                <input id="cadastro" type="text" name="servico" value="<?= $servico['nome_servico'] ?>">
+                <input id="cadastro" type="text" name="servico" value="<?= $servico['nome_servico'] ?>" required>
             </div>
 
             <div class="categ">

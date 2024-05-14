@@ -9,17 +9,17 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/sefast/templates/_cabecalho.php'
 
       <div class="my-3">
          <label for="nome">Nome</label>
-         <input autocomplete="disabled" type="text" id="nome" name="nome" class="form-control" placeholder="Nome" maxlength="40">
+         <input autocomplete="disabled" type="text" id="nome" name="nome" class="form-control" placeholder="Nome" maxlength="40" required>
       </div>
 
       <div class="my-3">
          <label for="email">E-mail</label>
-         <input autocomplete="disabled" type="email" id="email" name="email" class="form-control" placeholder="Email" maxlength="190">
+         <input autocomplete="disabled" type="email" id="email" name="email" class="form-control" placeholder="Email" maxlength="190" required>
       </div>
 
       <div class="my-3">
          <label for="senha">Senha</label>
-         <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+         <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
       </div>
 
       <div class="my-3">

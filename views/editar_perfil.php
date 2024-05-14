@@ -14,12 +14,12 @@ echo $E->getMessage();
     <form action="/sefast/controllers/usuario_editar_controller.php" method="post" enctype="multipart/form-data" >
         <div class="my-3">
             <label for="nome">Nome:</label>
-            <input class="form-control" type="text" id="nome" value="<?= $qualquer->nome_usuario ?>" name="nome" placeholder="Nome Completo">
+            <input class="form-control" type="text" id="nome" value="<?= $qualquer->nome_usuario ?>" name="nome" placeholder="Nome Completo" required>
         </div>
 
         <div class="my-3">
             <label for="email">Email:</label>
-            <input class="form-control" value="<?=$qualquer->email?>" type="email" id="email" name="email" placeholder="exemplo@gmail.com">
+            <input class="form-control" value="<?=$qualquer->email?>" type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
         </div>
 
         <div class="my-3">

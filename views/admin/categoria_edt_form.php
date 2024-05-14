@@ -15,7 +15,7 @@ try {
     <form action="/sefast/controllers/categoria_edt_controller.php" method="post" enctype="multipart/form-data">
         <div class="form-group my-3">
             <label for="nome">Nome da Categoria</label>
-            <input class="form-control" type="text" name="nome" id="nome" value="<?= $categoria->nome_categoria ?>">
+            <input class="form-control" type="text" name="nome" id="nome" value="<?= $categoria->nome_categoria ?>" required>
         </div>
         <div class="form-group my-3">
             <label for="foto">Imagem para a Categoria</label>
