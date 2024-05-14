@@ -11,13 +11,13 @@
         </div>
 
         <div class="d-flex redes-sociais align-items-center">
-            <a class="text-body-secondary mx-3" href="#">
+            <a class="text-body-secondary mx-3" href="https://www.facebook.com/">
                 <img src="/sefast/imgs/facebook.svg" alt="" width="100%">
             </a>
-            <a class="text-body-secondary mx-3" href="#">
+            <a class="text-body-secondary mx-3" href="https://www.instagram.com/">
                 <img src="/sefast/imgs/instagram.svg" alt="" width="100%">
             </a>
-            <a class="text-body-secondary mx-3" href="#">
+            <a class="text-body-secondary mx-3" href="https://twitter.com/">
                 <img src="/sefast/imgs/twitter.svg" alt="" width="100%">
             </a>
         </div>

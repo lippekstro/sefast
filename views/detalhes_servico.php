@@ -20,6 +20,7 @@ try {
         </div>
         <div class="direito">
             <h1>Tipo de Serviço: <?= $trabaio['nome_servico'] ?></h1>
+            <img src="data:image;base64,<?= base64_encode($trabaio['foto_usuario']) ?>" alt="" width="100px" height="100px">
             <p class="nego">SeFaster: <?= $trabaio['nome_usuario'] ?></p>
             <p class="nego">Email: <a href="mailto:<?= $trabaio['email'] ?>"><?= $trabaio['email'] ?></a></p>
             <p class="nego">Contatos: <a href="tel:<?= $trabaio['telefone'] ?>"><?= $trabaio['telefone'] ?></a></p>

@@ -41,13 +41,14 @@ class Usuario
 
     public function criar()
     {
-        $sql = "INSERT INTO usuarios (nome_usuario, email, senha, telefone) VALUES (:nome, :email, :senha, :tel)";
+        $sql = "INSERT INTO usuarios (nome_usuario, email, senha, telefone, foto_usuario) VALUES (:nome, :email, :senha, :tel, :foto)";
         $conexao = Conexao::criarConexao();
         $stmt = $conexao->prepare($sql);
         $stmt->bindValue(':nome', $this->nome_usuario);
         $stmt->bindValue(':email', $this->email);
         $stmt->bindValue(':senha', $this->senha);
         $stmt->bindValue(':tel', $this->telefone);
+        $stmt->bindValue(':foto', $this->foto);
         $stmt->execute();
     }
 

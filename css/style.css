@@ -176,6 +176,10 @@ body {
     padding: 1rem;
 }
 
+.card-conteudo h1 {
+    font-size: revert;
+}
+
 .imgprof {
     width: 240px;
     height: 150px;

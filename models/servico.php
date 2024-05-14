@@ -65,7 +65,7 @@ class Servico
     
     public static function listarPorId($id)
     {
-        $sql = "SELECT s.*, u.nome_usuario, u.email, u.telefone, u.site_usuario, c.nome_categoria
+        $sql = "SELECT s.*, u.nome_usuario, u.email, u.telefone, u.site_usuario, u.foto_usuario, c.nome_categoria
         FROM servicos s 
         JOIN usuarios u 
         ON s.id_usuario = u.id_usuario

@@ -12,6 +12,11 @@
     grid-area: esquerdo;
 }
 
+.esquerdo img {
+    height: 400px;
+    object-fit: contain;
+}
+
 .direito {
     grid-area: direito;
     text-align: left;

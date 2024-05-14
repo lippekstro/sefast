@@ -14,6 +14,7 @@ try {
     $usuario->email = $e;
     $usuario->senha = $s;
     $usuario->telefone = $t;
+    $usuario->foto = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/sefast/imgs/dummy_usuario.png');
 
     $usuario->criar();
 
